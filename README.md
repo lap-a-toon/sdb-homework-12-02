@@ -62,6 +62,11 @@ mysql -usys_temp -p sakilla < ./sakila-data.sql
 Название таблицы | Название первичного ключа
 customer         | customer_id
 ```
+
+Запрос:
+```sql
+select s.TABLE_NAME tname, s.INDEX_NAME, s.COLUMN_NAME from information_schema.STATISTICS s where s.TABLE_SCHEMA ='sakila' AND s.INDEX_NAME='PRIMARY';
+```
 ![Индексы](./images/mysql-indexes.jpg)
 
 ## Дополнительные задания (со звездочкой*)
