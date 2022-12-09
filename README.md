@@ -22,14 +22,14 @@
 ```sql
 select user, host from mysql.user;
 ```
-[show grants for sys_temp@localhost;](./images/mysql-users-1.jpg)
+![show grants for sys_temp@localhost;](./images/mysql-users-1.jpg)
 
 1.4 Дайте все права для пользователя sys_temp. 
 1.5 Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
 ```sql
 show grants for sys_temp@localhost;
 ```
-[show grants for sys_temp@localhost;](./images/mysql-grants-1.jpg)
+![show grants for sys_temp@localhost;](./images/mysql-grants-1.jpg)
 
 1.6 Переподключитесь к базе данных от имени sys_temp.
 Для смены типа аутентификации с sha2 используйте запрос: 
@@ -46,9 +46,9 @@ cd sakila-db
 mysql -usys_temp -p sakilla < ./sakila-schema.sql
 mysql -usys_temp -p sakilla < ./sakila-data.sql
 ```
-[importing](./images/mysql-import-db-result-1.jpg)
+![importing](./images/mysql-import-db-result-1.jpg)
 1.8 При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
-[importing](./images/mysql-import-db-result-2.jpg)
+![importing](./images/mysql-import-db-result-2.jpg)
 *Результатом работы должны быть скриншоты обозначенных заданий, а так же "простыня" со всеми запросами.*
 Простыни не вышло, делал через терминал. Хотя не уверен, что сделал всёё правильно. Впрочем, конечный результат, кажется, нормальным.
 
@@ -59,7 +59,7 @@ mysql -usys_temp -p sakilla < ./sakila-data.sql
 Название таблицы | Название первичного ключа
 customer         | customer_id
 ```
-[Индексы](./images/mysql-indexes.jpg)
+![Индексы](./images/mysql-indexes.jpg)
 
 ## Дополнительные задания (со звездочкой*)
 Эти задания дополнительные (не обязательные к выполнению) и никак не повлияют на получение вами зачета по этому домашнему заданию. Вы можете их выполнить, если хотите глубже и/или шире разобраться в материале.
@@ -71,5 +71,5 @@ customer         | customer_id
 revoke INSERT, DELETE, UPDATE on *.* from 'sys_temp'@'localhost';
 show grants for sys_temp@localhost;
 ```
-[show grants for sys_temp@localhost;](./images/mysql-revoked-priveleges.jpg)
+![show grants for sys_temp@localhost;](./images/mysql-revoked-priveleges.jpg)
 *Результатом работы должны быть скриншоты обозначенных заданий, а так же "простыня" со всеми запросами.*
